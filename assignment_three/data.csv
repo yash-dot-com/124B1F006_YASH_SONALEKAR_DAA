@@ -1,0 +1,9 @@
+item_id,item_name,weight,utility
+1,Rice,25,100
+2,Water,20,160
+3,Medicine,10,120
+4,Blankets,15,90
+5,Food Packets,30,150
+6,First Aid Kit,8,100
+7,Canned Food,18,126
+8,Baby Food,12,108
