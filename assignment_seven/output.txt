@@ -1,0 +1,35 @@
+yash@yash assignment_seven % g++ graph_color.cpp -o gc && ./gc
+Subjects:
+0 - DAA
+1 - AIML
+2 - SPM
+3 - EAC
+4 - MDM-3
+Enter number of conflicts: 5           
+0 1
+0 2
+1 2
+2 3
+3 4
+3
+150 100 80
+120 120 100 80 60
+Enter conflicting pairs (u v):
+Enter number of rooms: Enter capacity of each room:
+Enter student count for DAA, AIML, SPM, EAC, MDM-3:
+
+----- EXAM TIMETABLE -----
+
+Slot 1:
+DAA (120 students) - Room 1
+EAC (80 students) - Room 3
+
+Slot 2:
+AIML (120 students) - Room 1
+MDM-3 (60 students) - Room 3
+
+Slot 3:
+SPM (100 students) - Room 2
+
+Total exam slots: 3
+yash@yash assignment_seven % 
