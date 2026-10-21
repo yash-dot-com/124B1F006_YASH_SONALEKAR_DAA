@@ -1,23 +1,70 @@
-yash@yash assignment_six % g++ knapsack.cpp -o k && ./k
-Enter number of items: 5
-3 40 1
-4 50 1
-5 60 0
-2 20 0
-6 70 0
-2
-10
-8
-Item 1 (weight utility priority): Item 2 (weight utility priority): Item 3 (weight utility priority): Item 4 (weight utility priority): Item 5 (weight utility priority): Enter number of trucks: Enter capacity of truck 1: 
-Truck 1
-Maximum utility: 130
-Selected items:
-Item 4 (2 kg)
-Item 2 (4 kg)
-Item 1 (3 kg)
+yash@yash assignment_six % g++ knapsack.cpp -o ks && ./ks
 
-Enter capacity of truck 2: 
-Truck 2
-Maximum utility: 70
-Selected items:
-Item 5 (6 kg)
+========== DISASTER RELIEF RESOURCE ALLOCATION ==========
+Enter number of relief items: 5
+Item 1 (weight utility priority [0/1]): 3 40 1
+Item 2 (weight utility priority [0/1]): 4 50 1
+Item 3 (weight utility priority [0/1]): 5 60 0
+Item 4 (weight utility priority [0/1]): 2 20 0
+Item 5 (weight utility priority [0/1]): 6 70 0
+
+================ RELIEF ITEM INVENTORY ================
+Item      Weight (kg)    Utility     Priority    Bonus          Final Utility  
+-------------------------------------------------------------------------------
+1         3              40          High        10             50             
+2         4              50          High        10             60             
+3         5              60          Normal      0              60             
+4         2              20          Normal      0              20             
+5         6              70          Normal      0              70             
+-------------------------------------------------------------------------------
+
+Enter number of trucks: 2
+Enter capacity of truck 1 (kg): 10
+
+================ TRUCK 1 - SELECTED ITEMS ================
+Item      Weight (kg)    Utility     Priority    Bonus       Final Utility  
+----------------------------------------------------------------------------
+1         3              40          High        10          50             
+2         4              50          High        10          60             
+4         2              20          Normal      0           20             
+----------------------------------------------------------------------------
+
+---------------- TRUCK 1 SUMMARY ----------------
+Truck Capacity       : 10 kg
+Total Weight Loaded  : 9 kg
+Remaining Capacity   : 1 kg
+Items Selected       : 3
+Maximum Utility      : 130
+--------------------------------------------------
+
+Enter capacity of truck 2 (kg): 8
+
+================ TRUCK 2 - SELECTED ITEMS ================
+Item      Weight (kg)    Utility     Priority    Bonus       Final Utility  
+----------------------------------------------------------------------------
+5         6              70          Normal      0           70             
+----------------------------------------------------------------------------
+
+---------------- TRUCK 2 SUMMARY ----------------
+Truck Capacity       : 8 kg
+Total Weight Loaded  : 6 kg
+Remaining Capacity   : 2 kg
+Items Selected       : 1
+Maximum Utility      : 70
+--------------------------------------------------
+
+=============== FINAL ALLOCATION SUMMARY ===============
+Total Trucks             2
+Total Weight Loaded      15 kg
+Total Utility            200
+
+================ REMAINING ITEMS ================
+Item        Weight (kg)    Utility        Status         
+---------------------------------------------------------
+1           3              40             Allocated      
+2           4              50             Allocated      
+3           5              60             Available      
+4           2              20             Allocated      
+5           6              70             Allocated      
+---------------------------------------------------------
+yash@yash assignment_six % 
