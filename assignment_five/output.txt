@@ -1,8 +1,9 @@
-yash@yash daa % g++ assignment_five/multigraph.cpp -o m && ./m
+yash@yash assignment_five % g++ multigraph.cpp -o m && ./m
+========== MULTISTAGE GRAPH - DYNAMIC PROGRAMMING ==========
 Enter number of stages: 4
 Enter number of nodes in each stage (4 values): 1 2 2 1
-Enter number of edges: 6
-Enter each edge as: u v cost
+Enter number of directed edges: 6
+Enter edges as: from to cost
 0 1 5 
 0 2 7 
 1 3 2
@@ -10,15 +11,29 @@ Enter each edge as: u v cost
 2 4 1
 4 5 3
 
-Best costs from Stage-0 nodes:
-Node 0: cost = 11.000000
+======================= GRAPH EDGES =======================
+From      To        Stage            Base Cost    Current Cost
+--------------------------------------------------------------
+0         1         1 -> 2                5.00            5.00
+0         2         1 -> 2                7.00            7.00
+1         3         2 -> 3                2.00            2.00
+1         4         2 -> 3                4.00            4.00
+2         4         2 -> 3                1.00            1.00
+4         5         3 -> 4                3.00            3.00
+--------------------------------------------------------------
 
-Enter a source node id (in stage 0) to print path, or -1 to skip: 0
-Path from 0 : 0 -> 2 -> 4 -> 5
-Total route cost (sum edges): 11.000000
+================== MINIMUM COST DP TABLE ==================
+Stage       Node        Min Cost to Finish     Next Node
+--------------------------------------------------------------
+1           0           11.00                  2
+2           1           7.00                   4
+2           2           4.00                   4
+3           3           Unreachable            -
+3           4           3.00                   5
+4           5           0.00                   -
+--------------------------------------------------------------
 
-Enter number of live updates to edge costs (0 to finish): 1
-Enter edge update (u v multiplier): 2 4 2
+============== STAGE 1 SOURCE COSTS ==============
+Node 0 : 11.00
 
-After updates, best costs from Stage-0 nodes:
-Node 0: cost = 12.000000
+Enter source node (from first stage): 

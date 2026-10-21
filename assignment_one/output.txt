@@ -1,0 +1,21 @@
+record loaded
+sorting completed
+Total records sorted: 1000000
+Execution time: 0.243 seconds
+
+========== FIRST 10 SORTED RECORDS ==========
+Sr. No.   Timestamp
+-----------------------------------
+1         1700000001
+2         1700000005
+3         1700000012
+4         1700000018
+5         1700000024
+6         1700000031
+7         1700000035
+8         1700000042
+9         1700000048
+10        1700000053
+-----------------------------------
+
+All sorted records saved to sorted_customer_orders.csv
