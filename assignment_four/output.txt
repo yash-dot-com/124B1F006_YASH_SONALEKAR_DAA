@@ -1,0 +1,52 @@
+yash@yash assignment_four % g++ djikstra.cpp -o d && ./d
+
+========== AMBULANCE ROUTE OPTIMIZATION ==========
+Enter number of intersections: 5
+Enter number of roads: 6
+
+Enter roads as: from to travel_time
+0 1 4
+0 2 2
+1 2 1
+1 3 5
+2 3 8
+2 4 3
+
+================ ROAD NETWORK ================
+Road No.    From           To             Travel Time       
+------------------------------------------------------------
+1           0              1              4                 
+2           0              2              2                 
+3           1              2              1                 
+4           1              3              5                 
+5           2              3              8                 
+6           2              4              3                 
+------------------------------------------------------------
+
+Enter ambulance start location: 0
+Enter number of hospitals: 2
+Enter hospital node IDs: 3 4
+
+=============== SHORTEST DISTANCES ===============
+Node           Travel Time (min)     Previous Node  
+-------------------------------------------------------
+0              0                     -              
+1              3                     2              
+2              2                     0              
+3              8                     1              
+4              5                     2              
+-------------------------------------------------------
+
+================ HOSPITAL COMPARISON ================
+Hospital       Travel Time         Status            Shortest Route
+------------------------------------------------------------------------------------------
+3              8                   Reachable         0 -> 2 -> 1 -> 3
+4              5                   Reachable         0 -> 2 -> 4
+------------------------------------------------------------------------------------------
+
+================== FINAL RESULT ==================
+Ambulance Start Node : 0
+Nearest Hospital     : Node 4
+Shortest Path        : 0 -> 2 -> 4
+Minimum Travel Time  : 5 minutes
+==================================================
