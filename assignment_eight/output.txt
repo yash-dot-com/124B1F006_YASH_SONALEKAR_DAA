@@ -1,12 +1,47 @@
-yash@yash assignment_eight % clear
 yash@yash assignment_eight % g++ travelling_salesman.cpp -o ts && ./ts
+
+========== TRAVELLING SALESMAN PROBLEM ==========
+Algorithm: Least Cost Branch and Bound
+
 Enter number of cities: 4
+
 Enter cost matrix (0 for no road):
 0 10 15 20
 10 0 35 25
 15 35 0 30
 20 25 30 0
 
-Minimum cost: 80
-Route: 0 -> 2 -> 3 -> 1 -> 0
-yash@yash assignment_eight %
+================ ORIGINAL COST MATRIX ================
+From/To     City 0      City 1      City 2      City 3      
+------------------------------------------------------------
+City 0      INF         10          15          20          
+City 1      10          INF         35          25          
+City 2      15          35          INF         30          
+City 3      20          25          30          INF
+------------------------------------------------------------
+
+================ INITIAL REDUCED MATRIX ================
+From/To     City 0      City 1      City 2      City 3
+------------------------------------------------------------
+City 0      INF         0           0           0           
+City 1      0           INF         20          5
+City 2      0           20          INF         5
+City 3      0           5           5           INF
+------------------------------------------------------------
+Initial Lower Bound : 70
+
+================ OPTIMAL ROUTE =================
+Step      From        To          Travel Cost     Cumulative Cost     
+----------------------------------------------------------------------
+1         0           2           15              15                  
+2         2           3           30              45                  
+3         3           1           25              70                  
+4         1           0           10              80                  
+----------------------------------------------------------------------
+
+================ FINAL RESULT =================
+Starting City       : 0
+Total Cities        : 4
+Cities Visited      : 4
+Shortest Tour       : 0 -> 2 -> 3 -> 1 -> 0
+Minimum Travel Cost : 80
