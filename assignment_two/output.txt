@@ -13,3 +13,16 @@ Movie ID  Title                         Rating  Year  Popularity  Genre         
 7376      Evening of Painter             10.0  2017       16553  Drama                 104  20970        en
 9466      The Winter Heart               10.0  2001       47972  Horror                149  35862        en
 ----------------------------------------------------------------------------------------------------------------
+
+Showing first 10 of 1000000 sorted movies.
+Remaining records are saved in sorted_movies.csv
+
+================ SORTING SUMMARY ================
+Algorithm        : Quick Sort
+Sorted By        : rating
+Order            : desc
+Total Records    : 1000000
+Displayed Records: 10
+Execution Time   : 0.243342 seconds
+Output File      : sorted_movies.csv
+=================================================
