@@ -1,35 +1,83 @@
 yash@yash assignment_seven % g++ graph_color.cpp -o gc && ./gc
-Subjects:
-0 - DAA
-1 - AIML
-2 - SPM
-3 - EAC
-4 - MDM-3
-Enter number of conflicts: 5           
+
+========== UNIVERSITY EXAM TIMETABLE ==========
+
+--------------- SUBJECT LIST ---------------
+Node        Subject        
+---------------------------
+0           DAA
+1           AIML           
+2           SPM            
+3           EAC            
+4           MDM-3          
+---------------------------
+
+Enter number of conflicts: 5
+Enter conflicting pairs (u v):
 0 1
 0 2
 1 2
 2 3
 3 4
-3
-150 100 80
-120 120 100 80 60
-Enter conflicting pairs (u v):
-Enter number of rooms: Enter capacity of each room:
-Enter student count for DAA, AIML, SPM, EAC, MDM-3:
 
------ EXAM TIMETABLE -----
+================ CONFLICT GRAPH ================
+Conflict    Subject 1         Subject 2         Restriction
+-----------------------------------------------------------------
+1           DAA               AIML              Different slots
+2           DAA               SPM               Different slots
+3           AIML              SPM               Different slots
+4           SPM               EAC               Different slots
+5           EAC               MDM-3             Different slots
+-----------------------------------------------------------------
 
-Slot 1:
-DAA (120 students) - Room 1
-EAC (80 students) - Room 3
+================ GRAPH COLOURING =================
+Node        Subject        Color ID    Color          Time Slot   
+------------------------------------------------------------------
+0           DAA            1           RED            1           
+1           AIML           2           GREEN          2           
+2           SPM            3           BLUE           3           
+3           EAC            1           RED            1           
+4           MDM-3          2           GREEN          2           
+------------------------------------------------------------------
 
-Slot 2:
-AIML (120 students) - Room 1
-MDM-3 (60 students) - Room 3
+Enter number of classrooms: 3
+Enter capacity of each room:
+Room 1 capacity: 150 
+Room 2 capacity: 100 
+Room 3 capacity: 80
 
-Slot 3:
-SPM (100 students) - Room 2
+Enter student count for each subject:
+DAA: 120
+AIML: 120
+SPM: 100
+EAC: 80
+MDM-3: 60
 
-Total exam slots: 3
-yash@yash assignment_seven % 
+================ CLASSROOM DETAILS ================
+Room           Capacity
+-----------------------------------
+1              150                 
+2              100                 
+3              80                  
+-----------------------------------
+
+================ FINAL EXAM TIMETABLE ================
+Time Slot   Color          Subject        Students    Room        Room Capacity  Status
+-------------------------------------------------------------------------------------------------
+1           RED            DAA            120         1           150            ALLOCATED
+1           RED            EAC            80          3           80             ALLOCATED
+2           GREEN          AIML           120         1           150            ALLOCATED
+2           GREEN          MDM-3          60          3           80             ALLOCATED
+3           BLUE           SPM            100         2           100            ALLOCATED
+-------------------------------------------------------------------------------------------------
+
+================ SCHEDULING SUMMARY ================
+Total Subjects       : 5
+Total Conflicts      : 5
+Total Time Slots     : 3
+Colors Used          : 3
+Available Classrooms : 3
+Exams Allocated      : 5/5
+Conflict Check       : PASSED
+Room Allocation      : COMPLETE
+====================================================
