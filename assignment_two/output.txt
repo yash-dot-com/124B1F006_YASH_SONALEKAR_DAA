@@ -1,0 +1,15 @@
+================ FIRST 10 SORTED MOVIES ================
+
+Movie ID  Title                         Rating  Year  Popularity  Genre             Runtime  Votes  Language
+----------------------------------------------------------------------------------------------------------------
+146       The Red Echo                   10.0  2026       22327  Science Fiction       148  19789        ja
+6810      The Northern Storm             10.0  1980        1182  Horror                133   3211        hi
+8719      Rain of Door                   10.0  1999        5481  Mystery               149   3194        en
+8338      The Glass Road                 10.0  1961        8850  Science Fiction       153   6492        hi
+2236      Stranger in Havana             10.0  2001       20635  Drama                 158  13331        en
+671       The Northern Shadow            10.0  1981       17524  Crime                  92  13699        en
+8409      Hotel in Vienna                10.0  1973       82124  Crime                 158  81708        es
+4496      Village of Morning             10.0  2006        2569  Comedy                129   1607        it
+7376      Evening of Painter             10.0  2017       16553  Drama                 104  20970        en
+9466      The Winter Heart               10.0  2001       47972  Horror                149  35862        en
+----------------------------------------------------------------------------------------------------------------
