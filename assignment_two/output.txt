@@ -16,13 +16,3 @@ Movie ID  Title                         Rating  Year  Popularity  Genre         
 
 Showing first 10 of 1000000 sorted movies.
 Remaining records are saved in sorted_movies.csv
-
-================ SORTING SUMMARY ================
-Algorithm        : Quick Sort
-Sorted By        : rating
-Order            : desc
-Total Records    : 1000000
-Displayed Records: 10
-Execution Time   : 0.243342 seconds
-Output File      : sorted_movies.csv
-=================================================
